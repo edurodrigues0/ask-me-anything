@@ -1,8 +1,9 @@
 import amaLogo from "../assets/ama-logo.svg"
 
-import { ArrowRight, ArrowUp, Share2 } from "lucide-react"
+import { ArrowRight, Share2 } from "lucide-react"
 import { toast } from "sonner"
 import { Message } from "../components/message"
+import { Button } from "../components/Button"
 
 export function Room() {
 
@@ -14,7 +15,7 @@ export function Room() {
     }
 
     navigator.clipboard.writeText(url)
-    toast.info('The room URL was copied to your clipboard')
+    toast.info('O link foi copiada para área de transferência')
   }
 
   return (
@@ -26,14 +27,15 @@ export function Room() {
           Código da sala <span className="text-zinc-300">sad12aw85q</span>
         </span>
 
-        <button
-            className="ml-auto bg-zinc-800 text-zinc-300 px-3 py-1.5 gap-1.5 flex items-center rounded-lg font-medium text-sm transition-colors hover:bg-zinc-700"
-            type="submit"
-            onClick={handleShareRoom}
-          >
-            Compartilhar
-            <Share2 className="size-4" />
-          </button>
+        <Button.Root
+          variant="SECONDARY"
+          className="ml-auto"
+          type="submit"
+          onClick={handleShareRoom}
+        >
+          <Button.Label text="Compartilhar" />
+          <Button.Icon icon={Share2} />
+        </Button.Root>
       </div>
 
       <div className="h-px w-full bg-zinc-900" />
@@ -59,7 +61,7 @@ export function Room() {
       </form>
 
       <ol className="list-decimal list-outside px-3 space-y-8">
-        <Message text="Como funciona GoLang?" amountOfReactions={10} answered />
+        <Message text="Como funciona GoLang?" amountOfReactions={10} />
       </ol>
     </div>
   )
