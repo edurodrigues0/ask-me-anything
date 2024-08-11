@@ -35,7 +35,7 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 
 ```bash
 # Clone este repositorio
-$ git clone https://github.com/edurodrigues0/api-maturation-production.git
+$ git clone https://github.com/edurodrigues0/ask-me-anything.git
 
 # Acesse a pasta do projeto no terminal/cmd
 
