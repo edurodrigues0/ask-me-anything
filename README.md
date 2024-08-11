@@ -1,50 +1,57 @@
-# React + TypeScript + Vite
+# AMA (Ask me anything)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Apresentação
 
-Currently, two official plugins are available:
+O projeto AMA (Ask Me Anything) foi desenvolvido como parte da Semana Tech Go React organizada pela Rocketseat. Este projeto tem como objetivo criar uma plataforma interativa onde os usuários podem fazer perguntas em tempo real e receber respostas imediatas, proporcionando uma experiência de interação fluida e dinâmica.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologias Utilizadas
 
-## Expanding the ESLint configuration
+- React.js: A biblioteca principal utilizada para a construção da interface do usuário, permitindo a criação de componentes reutilizáveis e gerenciando o estado da aplicação de forma eficiente.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- TypeScript: Utilizado para adicionar tipagem estática ao JavaScript, garantindo maior segurança e clareza no desenvolvimento, além de facilitar a manutenção do código a longo prazo.
 
-- Configure the top-level `parserOptions` property like this:
+- Vite: Um bundler rápido e moderno, escolhido pela sua eficiência na criação de projetos React, oferecendo um ambiente de desenvolvimento otimizado com recarregamento rápido e build rápido para produção.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- WebSockets: Implementado para permitir a atualização em tempo real na plataforma, possibilitando que perguntas e respostas sejam exibidas instantaneamente sem a necessidade de recarregar a página.
+
+- React Query: Utilizado para gerenciar o estado de dados assíncronos, como as perguntas e respostas, facilitando o cache, a sincronização e a atualização dos dados em tempo real, além de melhorar a performance da aplicação ao minimizar requisições desnecessárias ao servidor.
+
+## Funcionalidades do Projeto
+
+- Envio de Perguntas em Tempo Real: Os usuários podem enviar perguntas que são exibidas imediatamente na interface, graças à integração com WebSockets.
+
+- Atualização Automática das Respostas: As respostas dos administradores ou outros usuários aparecem em tempo real, garantindo uma interação dinâmica e sem atrasos.
+
+- Melhoria na Resolução de Respostas: A plataforma permite que as respostas sejam marcadas como "resolvidas", destacando as questões que já foram abordadas.
+
+## 📋 Pré-requisitos
+
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+
+- [Git](https://git-scm.com)
+- [npm](https://docs.npmjs.com/cli/v10/commands/npm-install)
+
+## Rodando o Front End
+
+```bash
+# Clone este repositorio
+$ git clone https://github.com/edurodrigues0/api-maturation-production.git
+
+# Acesse a pasta do projeto no terminal/cmd
+
+# Instale as dependências
+$ npm install
+
+# Execute a aplicação em modo de desenvolvimento
+$ npm run dev
+
+# O projeto iniciará em http://localhost:5173
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Melhorias
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- [ ] Interface Responsiva
+- [ ] Respostas Imediatas
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Conclusão
+O projeto AMA (Ask Me Anything) foi uma excelente oportunidade para aplicar e consolidar conhecimentos em React.js, TypeScript e Vite, além de explorar as capacidades dos WebSockets para criar experiências interativas em tempo real. A experiência proporcionada pela Semana Tech Go React foi fundamental para o desenvolvimento de habilidades práticas e a construção de uma aplicação moderna e eficiente.
